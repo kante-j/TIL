@@ -14,7 +14,7 @@ LDAP 구축을 하다가 디버깅을 해야하는 상황이 생겼는데, Xdebu
 
 http://xdebug.org/download 페이지에 가서
 
-![image-20201126094146965](C:\Users\ADMIN\AppData\Roaming\Typora\typora-user-images\image-20201126094146965.png)
+![image](https://user-images.githubusercontent.com/28242038/100306665-3cdd0280-2fe7-11eb-8b7c-de320b1f9f20.png)
 
 중에 자기 PHP버전에 맞는 것을 다운로드하면 된다. 그리고 {xdebug....}.dll 파일은 자신의 설치된 php 경로/ext 폴더 안에 넣기. 나 같은 경우는 C:\php7\ext 에 넣어주었다.
 
@@ -38,13 +38,13 @@ xdebug.start_with_request=yes
 
 2. Languages & Frameworks -> PHP -> Debug 로 들어간다.
 
-   ![image-20201126095351515](C:\Users\ADMIN\AppData\Roaming\Typora\typora-user-images\image-20201126095351515.png)
+   ![image](https://user-images.githubusercontent.com/28242038/100306685-46666a80-2fe7-11eb-8bbf-c60ad3e7ba9e.png)
 
    다음과 같이 변경한다.
 
 3. Debug-> DBGp Proxy도 들어가서
 
-   ![image-20201126095427298](C:\Users\ADMIN\AppData\Roaming\Typora\typora-user-images\image-20201126095427298.png)
+   ![image](https://user-images.githubusercontent.com/28242038/100306700-4e260f00-2fe7-11eb-9d27-ed6077bc15f6.png)
 
    다음과 같이 변경시켜준다.
 
@@ -66,7 +66,7 @@ https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdg
 
 에 접속해서 설치를 해준다.
 
-![image-20201126095634945](C:\Users\ADMIN\AppData\Roaming\Typora\typora-user-images\image-20201126095634945.png)
+![image](https://user-images.githubusercontent.com/28242038/100306712-541bf000-2fe7-11eb-8c95-d576c83e93f9.png)
 
 에서 ... 버튼을 눌러 옵션으로 가서  IDEKey를 PHPstorm으로 변경시켜 준다.
 
@@ -80,7 +80,7 @@ $ php artisan serve
 
 로 laravel을 시작하고 자기가 원하는 곳에 Ctrl + F8을 눌러 브레이킹 포인트를 건 다음에 
 
-![image-20201126095914195](C:\Users\ADMIN\AppData\Roaming\Typora\typora-user-images\image-20201126095914195.png)
+![image](https://user-images.githubusercontent.com/28242038/100306719-5aaa6780-2fe7-11eb-8b77-e726baf36b26.png)
 
 여기 전화표시를 이렇게 초록색으로 해주고, 실행하면 디버깅창이 뜨면서 디버깅을 시작할 수 있다.
 
