@@ -1,6 +1,4 @@
 # TIL
 Today I Learn
 
-[2020년 11월](https://github.com/wltjr0920/TIL/tree/main/2020_NOVEMBER)
-
-[2020년 12월](https://github.com/wltjr0920/TIL/tree/main/2020_DECEMBER)
+여기에.. 자동으로 내가 파일을 올릴때마다 자동으로 링크 생성되도록 하고싶은데.. 찾아봐야지!!
