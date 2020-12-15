@@ -35,19 +35,16 @@ xdebug.start_with_request=yes
 ### PhpStorm 설정
 
 1. PHPStorm에서 Ctrl + Alt + S 를눌러 세팅으로 들어간다.
-
 2. Languages & Frameworks -> PHP -> Debug 로 들어간다.
 
    ![image](https://user-images.githubusercontent.com/28242038/100306685-46666a80-2fe7-11eb-8bbf-c60ad3e7ba9e.png)
 
    다음과 같이 변경한다.
-
 3. Debug-> DBGp Proxy도 들어가서
 
    ![image](https://user-images.githubusercontent.com/28242038/100306700-4e260f00-2fe7-11eb-9d27-ed6077bc15f6.png)
 
    다음과 같이 변경시켜준다.
-
 4. config/app.php 파일에 들어가서
 
    ```php
