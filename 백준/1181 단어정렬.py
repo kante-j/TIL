@@ -1,6 +1,3 @@
-# 백준 1181 - 단어정렬 
-
-```python
 num = int(input())
 arr = set()
 for i in range(num):
@@ -12,5 +9,3 @@ arr.sort()
 arr.sort(key=lambda x : len(x))
 for s in arr:
 	print(s)
-```
-
