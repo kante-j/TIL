@@ -1,21 +1,18 @@
-t = int(input())
+from sys import stdin
+t = int(stdin.readline())
 while t:
     t -= 1
-    n = int(input())
+    n = int(stdin.readline())
     arr = []
     for i in range(n):
-        arr.append(input())
+        arr.append(stdin.readline().rstrip('\n'))
     check = True
-    for i in range(0,n):
-        for j in range(0,n):
-            if i == j:
-                continue
-            else:
-                if arr[i] == arr[j][0:len(arr[i])]:
-                    check = False
-                    break
-        if check == False:
-            print("NO")
+    arr.sort()
+    for i in range(0,n-1):
+        if arr[i] == arr[i+1][0:len(arr[i])]:
+            check = False
             break
-    if check:
+    if check == False:
+        print("NO")
+    else:
         print("YES")
