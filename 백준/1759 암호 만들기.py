@@ -20,3 +20,4 @@ for i in list(itertools.combinations(arr,L)):
             if cnt >= 2:
                 print(res)
                 break
+
