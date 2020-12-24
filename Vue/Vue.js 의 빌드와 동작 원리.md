@@ -6,6 +6,8 @@ Vue 프로젝트에서 개발자가 프론트 엔드로 개발을 마쳤다. 그
 
 나도 아직 NGinx 나 Apache, Gitlab Runner 이런 것들을 써본 적은 있어도 동작 원리나 자세한 것들은 잘 모르지만.. 차근차근 알아가보려 한다. 먼저 Vue 프로젝트를 어떻게 빌드하는지부터 알아보려 한다. 아니. 빌드하는 방법은 나와있으니까, 빌드가 되는 원리부터 알아보려고 한다.
 
+자세히는 적지 않았고, 이글을 보면서 따라갈 수 있게 적지도 않았다. 그냥 각각 주제에 대한 간단한 설명들을 적어놨으니 참고만 하면 좋을 것 같다.
+
 ---
 
 ### npm & package
@@ -81,7 +83,7 @@ $ npm run build
 
 ![image](https://user-images.githubusercontent.com/28242038/102968430-33d44800-4537-11eb-9f7f-d10e50c58f9a.png)
 
-대략 이런 식으로 생긴다.
+대략 이런 식으로 생긴다. 이제 브라우저는 여기에 생성된 static file. 즉 main.js 파일을 실행시켜 웹페이지에 보여주는 것이다.
 
 ---
 
@@ -90,13 +92,3 @@ $ npm run build
 https://nesoy.github.io/articles/2019-02/Webpack
 
 https://skypacific.github.io/2019/02/25/kang.heehun@buildup_vuejs.html
-
-
-
-#### 더 찾아보기
-
-https://jay-ji.tistory.com/57
-
-https://jay-ji.tistory.com/58?category=870634
-
-https://k39335.tistory.com/64
