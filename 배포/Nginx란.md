@@ -26,12 +26,76 @@
 | 사용자가 많으면 많은 쓰레드 생성  | 다수의 연결을 효과적으로 처리 |
 | 하나의 쓰레드 = 하나의 클라이언트 | 리소스를 적게먹음             |
 
+#### 쓰레드 vs Event Driven
+
+![image](https://user-images.githubusercontent.com/28242038/103152744-40260280-47ce-11eb-8e93-3fd8146e4f60.png)
+
+![image](https://user-images.githubusercontent.com/28242038/103152749-474d1080-47ce-11eb-9290-9568c4d54844.png)
+
+위에가 쓰레드 방식이고 아래가 Event Driven 방식이다. 쓰레드 방식은 하나의 커넥션에 하나의 쓰레드가 생성되고, Event Driven은 먼저 처리되는 것부터 진행되도록 하는 방식이다.
+
+---
+
+### Nginx 프록시 서버
+
+node.js 에서 Express로 서버를 구성하고 Nginx로 프록시 서버로 구성해보자.
+
+```javascript
+const express = require('express');
+const app = express();
+app.get('/', function(res =>{
+			res.send("Hello World!");
+})
+app.listen(3000);
+```
+
+그리고 nginx.conf 파일에다가
+
+```nginx
+server{
+  listen 	80;
+  server_name localhost;
+  location{
+    proxy_pass http://127.0.0.1:3000/;
+  }
+}
+```
+
+으로 설정을 한다.
+
+그러면 인터넷 웹페이지에 127.0.0.1로 접속을 하면 3000번 포트로 접속이 된다.
+
+이유는 클라이언트에서는 80포트로만 요청이 들어오는데, 요청을 8080, 8081 등 여러 Application Server로 보내줄 수 있다.
 
 
 
+Nginx 변수도 처리할 수 있다
+
+```
+$host : opentutorials.org
+$uri : /production/module/index.php
+$args : type=module&id=12
+server_addr : 115.68.24.88
+server_name : localhost
+server_port : 80
+server_protocol : HTTP/1.1
+$arg_type : module
+$request_uri : /production/module/index.php?type=module&id=12
+$request_filename : /usr/local/nginx/html/production/module/index.php
+```
+
+
+
+---
+
+### Linux도 Nginx 설치할 수 있다.
+
+https://whatisthenext.tistory.com/123
 
 ---
 
 ### 참조
 
 https://m.blog.naver.com/jhc9639/220967352282
+
+https://wan-blog.tistory.com/54
