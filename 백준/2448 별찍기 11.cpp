@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <string>
 using namespace std;
-bool map[3100][3100] = { 0, };
+bool map[4000][10000] = { 0, };
 
 void recur(int x, int y, int depth) {
 	if (depth == 3) {
@@ -25,14 +25,15 @@ void recur(int x, int y, int depth) {
 int main() {
 	ios_base::sync_with_stdio(0);
 	cin.tie(NULL);
+	cout.tie(NULL);
 	int N;
 	cin >> N;
 	recur(0, N - 1, N);
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < 2 * N - 1; j++) {
-			cout << (map[i][j] ? "*":" ");
+			cout << (map[i][j] ? '*':' ');
 		}
-		cout << "\n";
+		cout << '\n';
 	}
 
 
